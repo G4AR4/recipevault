@@ -1,0 +1,30 @@
+CREATE TABLE IF NOT EXISTS users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  email TEXT UNIQUE NOT NULL,
+  password TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS recipes (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER NOT NULL,
+  title TEXT NOT NULL,
+  description TEXT,
+  cooking_time INTEGER,
+  servings INTEGER,
+  FOREIGN KEY(user_id) REFERENCES users(id)
+);
+
+CREATE TABLE IF NOT EXISTS ingredients (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  recipe_id INTEGER NOT NULL,
+  name TEXT NOT NULL,
+  FOREIGN KEY(recipe_id) REFERENCES recipes(id)
+);
+
+CREATE TABLE IF NOT EXISTS steps (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  recipe_id INTEGER NOT NULL,
+  step_number INTEGER NOT NULL,
+  description TEXT NOT NULL,
+  FOREIGN KEY(recipe_id) REFERENCES recipes(id)
+);
