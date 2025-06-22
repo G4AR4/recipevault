@@ -88,6 +88,20 @@ frontend/
 
    The frontend will run at [http://localhost:5173](http://localhost:5173) (default Vite port).
 
+## Screenshots
+
+**Login Page**  
+![Login and Registration Page](frontend/screenshots/1_LoginRegister.png)
+
+**Dashboard**  
+![Dashboard](frontend/screenshots/2_Dashboard.png)
+
+**Add Recipe**  
+![Add Recipe](frontend/screenshots/3_AddRecipe.png)
+
+**Recipe Detail**  
+![Recipe Detail](frontend/screenshots/4_RecipeDetail.png)
+
 ## Usage
 
 - Register a new account or log in with an existing one.
